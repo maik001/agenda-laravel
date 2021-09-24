@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/inserir', [HomeController::class, 'inserir']);
+Route::get('/inserir', [ContactController::class, 'index']);
+
+Route::post('/inserir', [ContactController::class, 'store']);
