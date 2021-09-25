@@ -4,9 +4,9 @@ Eu fiz esse projeto como um desafio proposto pelo Time de Tecnologia da Empresa 
 
 ## DEPEDÊNCIAS
 ##### Inertiajs
-*Server-side:
+* Server-side:
 composer require inertiajs/inertia-laravel
-*Client-side:
+* Client-side:
 npm install @inertiajs/inertia @inertiajs/inertia-vue3
 yarn add @inertiajs/inertia @inertiajs/inertia-vue3
 
