@@ -18,4 +18,4 @@ composer require laravel/ui
 
 ##### Tailwind:
 npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
-//CASO ESTEJA USANDO O VSCODE INSTALE A EXTENSÃO POSTCSS
+CASO ESTEJA USANDO O VSCODE INSTALE A EXTENSÃO POSTCSS
