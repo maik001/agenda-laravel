@@ -1,6 +1,6 @@
 
 ## SOBRE O PROJETO
-Eu fiz esse projeto como um desafio proposto pelo Time de Tecnologia da Empresa em que trabalho, mais como uma mensuração do meu conhecimento, a proposta é fazer um CRUD simples com o Framework Back-end PHP Laravel e a Biblioteca Front-end Javascript VUEjs, para facilitar meu trabalho eu utilizei o Inertiajs ao invés de zilhões de recursos de API dado que é um sistema monolítico simples, e usei o Tailwind especificamente para Modal(Ainda estou aprendendo rs).
+Eu fiz esse projeto como um desafio proposto pelo Time de Tecnologia da Empresa em que trabalho, mais como uma mensuração do meu conhecimento, a proposta é fazer um CRUD simples com o Framework Back-end PHP Laravel e a Biblioteca Front-end Javascript VUEjs, para facilitar meu trabalho eu utilizei o Inertiajs ao invés de zilhões de recursos de API dado que é um sistema monolítico simples, e usei o Tailwind especificamente para os Modais(Ainda estou aprendendo o Tailwind rs).
 
 ## DEPENDÊNCIAS
 ##### Inertiajs
