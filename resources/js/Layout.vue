@@ -4,8 +4,6 @@
       <h5 class="my-0 mr-md-auto font-weight-normal"><Link href="/">Desafio Time Tech</Link></h5>
       <nav class="my-2 my-md-0 mr-md-3">
         <Link class="p-2 text-dark" href='/inserir'>Cadastrar Usuário</Link>
-        <Link class="p-2 text-dark" >Editar Usuários</Link>
-        <Link class="p-2 text-dark">Remover Usuários</Link>
       </nav>
     </div>
     <article>

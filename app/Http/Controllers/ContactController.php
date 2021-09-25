@@ -17,8 +17,8 @@ class ContactController extends Controller
     public function index()
     {
     
-        return Inertia::render('Inserir');
-
+        $data = Contact::all();
+        return Inertia::render('Home', ['data' => $data]);
     }
 
     /**
@@ -26,11 +26,10 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function inserir()
     {
-        //
+        return Inertia::render('Inserir');
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -54,30 +53,8 @@ class ContactController extends Controller
         Contact::create($request->toArray());
 
 
-        return redirect()->route('home');
+        return Redirect::route('Home')->with('message', 'Contato criado com sucesso!');
         
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
     }
 
     /**
@@ -87,9 +64,24 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+
+        $request->validate([
+
+            'name' => ['required', 'max:50'],
+
+            'email' => ['required', 'max:50', 'email'],
+
+            'cellphone' => ['required', 'min:10']
+        ]);
+
+        if ($request->has('id')) {
+
+            Contact::find($request->input('id'))->update($request->all());
+    
+            return Redirect::route('Home')->with('message', 'Contato Atualizado com sucesso!');
+        }
     }
 
     /**
@@ -98,8 +90,13 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        if ($request->has('id')) {
+
+            Contact::find($request->input('id'))->delete();
+
+            return Redirect::route('Home')->with('message', 'Contato Deletado com sucesso!');
+        }
     }
 }
